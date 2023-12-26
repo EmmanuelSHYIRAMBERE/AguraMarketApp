@@ -12,8 +12,8 @@
                            <li><a href="{{url('/')}}">Home</a></li>
                            <li><a href="{{url('/')}}#about">About</a></li>
                            <li><a href="{{url('/')}}#service">Services</a></li>
-                           <li><a href="{{url('/access')}}#testmonial">Testimonial</a></li>
-                           <li><a href="{{url('/access')}}#blog">Blog</a></li>
+                           <li><a href="{{url('/shop')}}#testmonial">Testimonial</a></li>
+                           <li><a href="{{url('/shop')}}#blog">Blog</a></li>
                            <li><a href="{{url('/contact')}}">Contact</a></li>
                         </ul>
                      </div>
@@ -26,7 +26,7 @@
                            <li><a href="#">Checkout</a></li>
                            <li><a href="{{ route('login') }}">Login</a></li>
                            <li><a href="{{ route('register') }}">Register</a></li>
-                           <li><a href="{{url('/access')}}">Shopping</a></li>
+                           <li><a href="{{url('/shop')}}">Shopping</a></li>
                            <li><a href="#">Widget</a></li>
                         </ul>
                      </div>
@@ -41,7 +41,7 @@
                            <div class="information_f text-light">
                              <p><strong><i class="mdi mdi-map-marker"></i> </strong> Kigali, Rwanda</p>
                              <p><strong><i class="mdi mdi-whatsapp"></i> </strong> +250 7-- --- ---</p>
-                             <p><strong><i class="mdi mdi-email-open"></i> </strong> maket@agura.com</p>
+                             <p><strong><i class="mdi mdi-email-open"></i> </strong> aguramarket6@gmail.com</p>
                            </div>
                            <form>
                               <fieldset>

@@ -3,16 +3,16 @@
         
 
       
-        <a href="#" class="logo">AguraMarket</a>
+        <a href="{{url('/')}}" class="logo">AguraMarket</a>
 
         <nav class="navbar container" data-navbar>
           <ul class="navbar-list">
             <li>
               <a href="{{url('/')}}" class="navbar-link" data-nav-link>Home</a>
               <a href="#services" class="navbar-link" data-nav-link>Services</a>
-              <a href="{{url('/access')}}" class="navbar-link" data-nav-link>Shop</a>
+              <a href="{{url('/shop')}}" class="navbar-link" data-nav-link>Shop</a>
               <a href="#about" class="navbar-link" data-nav-link>About</a>
-              <a href="{{url('/access')}}#blog" class="navbar-link" data-nav-link>Blog</a>
+              <a href="{{url('/shop')}}#blog" class="navbar-link" data-nav-link>Blog</a>
               <a href="{{url('/contact')}}" class="navbar-link" data-nav-link
                 >Contact Us</a
               >

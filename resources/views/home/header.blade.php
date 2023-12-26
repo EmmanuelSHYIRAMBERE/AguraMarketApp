@@ -3,7 +3,7 @@
         
 
       
-        <a href="#" class="logo">AguraMarket</a>
+        <a href="{{url('/')}}" class="logo">AguraMarket</a>
 
         
         <ul class="navbar-nav w-50">

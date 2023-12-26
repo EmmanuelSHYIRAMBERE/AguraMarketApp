@@ -116,16 +116,16 @@
         
 
       
-        <a href="#" class="logo">AguraMarket</a>
+        <a href="{{url('/')}}" class="logo">AguraMarket</a>
 
         <nav class="navbar container" data-navbar>
           <ul class="navbar-list">
             <li>
               <a href="{{url('/')}}" class="navbar-link" data-nav-link>Home</a>
               <a href="#services" class="navbar-link" data-nav-link>Services</a>
-              <a href="{{url('/access')}}" class="navbar-link" data-nav-link>Shop</a>
+              <a href="{{url('/shop')}}" class="navbar-link" data-nav-link>Shop</a>
               <a href="#about" class="navbar-link" data-nav-link>About</a>
-              <a href="{{url('/access')}}#blog" class="navbar-link" data-nav-link>Blog</a>
+              <a href="{{url('/shop')}}#blog" class="navbar-link" data-nav-link>Blog</a>
               <a href="{{url('/contact')}}" class="navbar-link" data-nav-link
                 >Contact Us</a
               >
@@ -195,7 +195,7 @@
                         <tbody>
 
                         <?php
-                            $totatprice =0;
+                            $totalprice =0;
                         ?>
 
                         @foreach($cart as $carts)
@@ -211,7 +211,7 @@
                             </tr>
 
                         <?php
-                            $totatprice = $totatprice + $carts->price;
+                            $totalprice = $totalprice + $carts->price;
                         ?>
 
                         @endforeach
@@ -220,14 +220,14 @@
                       </table>
 
                       <div>
-                        <h1 class="total_price">Total Price : {{$totatprice}}</h1>
+                        <h1 class="total_price">Total Price : {{$totalprice}}</h1>
                       </div>
 
                       <div class="payment">
                         <h1 style="font-size: 25px; padding-bottom: 15px;">Proceesd to Order</h1>
 
-                        <a href="{{ url('cash_order') }}" class="btn btn-danger">Cash On Delivery</a>
-                        <a href="#" class="btn btn-warning">Pay Using Card</a>
+                        <a href="{{ url('cash_order') }}" class="btn btn-danger"><i class="mdi mdi-cash-multiple"></i> Cash On Delivery</a>
+                        <a href="{{ url('stripe', $totalprice) }}" class="btn btn-warning"><i class="mdi mdi-cards-outline"></i> Pay Using Card</a>
 
                       </div>
 
@@ -260,8 +260,8 @@
                            <li><a href="{{url('/')}}">Home</a></li>
                            <li><a href="{{url('/')}}#about">About</a></li>
                            <li><a href="{{url('/')}}#service">Services</a></li>
-                           <li><a href="{{url('/access')}}#testmonial">Testimonial</a></li>
-                           <li><a href="{{url('/access')}}#blog">Blog</a></li>
+                           <li><a href="{{url('/shop')}}#testmonial">Testimonial</a></li>
+                           <li><a href="{{url('/shop')}}#blog">Blog</a></li>
                            <li><a href="{{url('/contact')}}">Contact</a></li>
                         </ul>
                      </div>
@@ -274,7 +274,7 @@
                            <li><a href="#">Checkout</a></li>
                            <li><a href="{{ route('login') }}">Login</a></li>
                            <li><a href="{{ route('register') }}">Register</a></li>
-                           <li><a href="{{url('/access')}}">Shopping</a></li>
+                           <li><a href="{{url('/shop')}}">Shopping</a></li>
                            <li><a href="#">Widget</a></li>
                         </ul>
                      </div>
@@ -289,7 +289,7 @@
                            <div class="information_f text-light">
                              <p><strong><i class="mdi mdi-map-marker"></i> </strong> Kigali, Rwanda</p>
                              <p><strong><i class="mdi mdi-whatsapp"></i> </strong> +250 7-- --- ---</p>
-                             <p><strong><i class="mdi mdi-email-open"></i> </strong> maket@agura.com</p>
+                             <p><strong><i class="mdi mdi-email-open"></i> </strong> aguramarket6@gmail.com</p>
                            </div>
                            <form>
                               <fieldset>

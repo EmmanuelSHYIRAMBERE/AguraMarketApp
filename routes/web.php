@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\serviceController;
+use App\Http\Controllers\PaymentController;
 
 use App\Models\Services;
 
@@ -40,8 +41,11 @@ Route::middleware([
 
 route::get('/welcome', [WelcomeController::class, 'welcome']);
 
+route::get('/stripe/{totalprice}', [PaymentController::class, 'stripe']);
+Route::post('stripe/{totalprice}',[PaymentController::class, 'stripePost'])->name('stripe.post');
+
 route::get('/redirect', [HomeController::class, 'redirect']);
-route::get('/access', [HomeController::class, 'index']);
+route::get('/shop', [HomeController::class, 'index']);
 route::get('/contact', [HomeController::class, 'contact']);
 route::post('/make_contact', [HomeController::class, 'make_contact']);
 route::get('/product_details/{id}', [HomeController::class, 'product_details']);
