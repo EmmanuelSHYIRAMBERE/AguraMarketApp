@@ -55,6 +55,7 @@ route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
 route::get('/cash_order', [HomeController::class, 'cash_order']);
 
 route::get('/view_category', [AdminController::class, 'view_category']);
+route::get('/orders', [AdminController::class, 'orders']);
 route::post('/add_category', [AdminController::class, 'add_category']);
 route::get('/delete_category/{id}', [AdminController::class, 'delete_category']);
 route::get('/update_category/{id}', [AdminController::class, 'update_category']);

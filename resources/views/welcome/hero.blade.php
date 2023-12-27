@@ -1,10 +1,12 @@
 <section class="section hero" id="home" aria-label="hero">
-          <div class="container">
-            <div class="current">
-            <div>
-            <div class="hero-content">
+        <div class="container">
 
-                <p class="hero-subtitle">AguraMarket - Your partner in digital world</p>                
+          <div class="hero-content">
+
+                <p class="hero-subtitle">AguraMarket - Your partner in digital world</p>   
+                
+                <h1 class="h1 hero-title">We are available for marketing</h1>
+                
                 <p class="hero-text">
                   Ready to take your business productivity to the next level? Get in touch with
                   us today and let's discuss how we can
@@ -12,26 +14,12 @@
                   partnership with you on your digital marketing journey
                 </p>
   
-                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="{{url('/contact')}}" class="btn btn-success">Speak With Our Experts</a>
               </div>
 
-</div>
-              <div>
+          <figure class="hero-banner">
+            <img src="assetImages/DigitalMarketing.png" width="720" height="673" alt="hero banner" class="w-100 img_round">
+          </figure>
 
-
-
-  
-              <figure class="hero-banner">
-                <img
-                  src="assetImages/DigitalMarketing.png"
-                  width="720"
-                  height="673"
-                  alt="hero banner"
-                  class="w-100"
-                />
-              </figure>
-</div>
-
-              </div>
-          </div>
-        </section>
+        </div>
+      </section>

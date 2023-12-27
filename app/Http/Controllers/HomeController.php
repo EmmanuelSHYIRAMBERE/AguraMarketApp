@@ -22,8 +22,9 @@ class HomeController extends Controller
     public function index()
     {
         $product=Product::paginate(6);
+        $data=Product::all();
 
-        return view('home.userpage', compact('product'));
+        return view('home.userpage', compact('product', 'data'));
     }
 
     public function redirect()
@@ -55,8 +56,9 @@ class HomeController extends Controller
         $contact=new contact;
 
         $contact->names=$request->names;
+        $contact->company_name=$request->company_name;
         $contact->email=$request->email;
-        $contact->subject=$request->subject;
+        $contact->phone=$request->phone;
         $contact->message=$request->message;
            
         $contact->save();

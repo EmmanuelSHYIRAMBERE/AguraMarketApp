@@ -39,17 +39,17 @@
         @include('welcome.cta')
         
         
+        <!-- 
+          - #CONTACT
+        -->
+        
+        @include('welcome.contact')
+
         
         <!-- 
           - FOOTER
         -->  
         @include('welcome.footer')
-        
-        <div class="cpy_">
-         <p class="mx-auto">© 2023 All Rights Reserved By <a href="{{url('/')}}">AguraMarket</a><br>
-         
-         </p>
-      </div>
         
       </article>
     </main>

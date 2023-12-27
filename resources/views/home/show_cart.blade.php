@@ -88,77 +88,25 @@
       rel="stylesheet"
     />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <style>
+      .contact_title {
+        text-align: center;
+                padding-top: 40px;
+                font-size: 40px;
+                padding-bottom: 40px;
+      }
         .form-control {
-                color: #000000;
+                color: skyblue;
                 background-color: transparent;
             }
-        .thead {
-            height: 40px;
-            background: skyblue;
-        }
-        .th {
-            font-size: 40px;
-            font-weight: bold;
-        }
-        .total_price {
-            font-size: 30px;
-            padding: 40px;
-            font-weight: bold;
-        }
     </style>
       
    </head>
    <body>
          <!-- header section strats -->
-            <header class="header" data-header>
-      <div class="container">
-        
-
-      
-        <a href="{{url('/')}}" class="logo">AguraMarket</a>
-
-        <nav class="navbar container" data-navbar>
-          <ul class="navbar-list">
-            <li>
-              <a href="{{url('/')}}" class="navbar-link" data-nav-link>Home</a>
-              <a href="#services" class="navbar-link" data-nav-link>Services</a>
-              <a href="{{url('/shop')}}" class="navbar-link" data-nav-link>Shop</a>
-              <a href="#about" class="navbar-link" data-nav-link>About</a>
-              <a href="{{url('/shop')}}#blog" class="navbar-link" data-nav-link>Blog</a>
-              <a href="{{url('/contact')}}" class="navbar-link" data-nav-link
-                >Contact Us</a
-              >
-              @if (Route::has('login'))
-              <div class="butt">
-                
-                @auth
-                <x-app-layout>
-    
-                </x-app-layout>
-                @else
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                <a href="{{ route('login') }}" class="btn btn-success">Login</a>
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="btn btn-danger register">Register</a>
-                @endif
-                @endauth
-              </div>
-              @endif
-            </li>
-          </ul>
-        </nav>
-
-        <button
-          class="nav-toggle-btn"
-          aria-label="Toggle menu"
-          data-nav-toggler
-        >
-          <ion-icon name="menu-outline" class="open"></ion-icon>
-          <ion-icon name="close-outline" class="close"></ion-icon>
-        </button>
-      </div>
-    </header>
+         @include('home.header')
             <!-- end header section -->
             
       <!-- contact section -->
@@ -246,79 +194,10 @@
     </div>
 
     <!-- footer start -->
-      <footer style="background-color: #888888;">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-8">
-                  <div class="row">
-                  <div class="col-md-7">
-                     <div class="row">
-                        <div class="col-md-6">
-                     <div class="widget_menu">
-                        <h3 class="text-danger">Menu</h3>
-                        <ul class="">
-                           <li><a href="{{url('/')}}">Home</a></li>
-                           <li><a href="{{url('/')}}#about">About</a></li>
-                           <li><a href="{{url('/')}}#service">Services</a></li>
-                           <li><a href="{{url('/shop')}}#testmonial">Testimonial</a></li>
-                           <li><a href="{{url('/shop')}}#blog">Blog</a></li>
-                           <li><a href="{{url('/contact')}}">Contact</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="widget_menu">
-                        <h3 class="text-danger">Account</h3>
-                        <ul>
-                           <li><a href="{{ route('dashboard') }}">Account</a></li>
-                           <li><a href="#">Checkout</a></li>
-                           <li><a href="{{ route('login') }}">Login</a></li>
-                           <li><a href="{{ route('register') }}">Register</a></li>
-                           <li><a href="{{url('/shop')}}">Shopping</a></li>
-                           <li><a href="#">Widget</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                     </div>
-                  </div>     
-                  <div class="col-md-5">
-                     <div class="widget_menu">
-                        <h3 class="text-danger">For more info</h3>
-                        
-                        <div class="form_sub">
-                           <div class="information_f text-light">
-                             <p><strong><i class="mdi mdi-map-marker"></i> </strong> Kigali, Rwanda</p>
-                             <p><strong><i class="mdi mdi-whatsapp"></i> </strong> +250 7-- --- ---</p>
-                             <p><strong><i class="mdi mdi-email-open"></i> </strong> aguramarket6@gmail.com</p>
-                           </div>
-                           <form>
-                              <fieldset>
-                                 <div class="field">
-                                    <div class="template-demo">
-                                      <button type="button" class="btn btn-social-icon-text btn-outline-facebook"><i class="mdi mdi-facebook"></i></button>
-                                      <button type="button" class="btn btn-social-icon-text btn-outline-twitter"><i class="mdi mdi-twitter"></i></button>
-                                      <button type="button" class="btn btn-social-icon-text btn-outline-linkedin"><i class="mdi mdi-linkedin"></i></button>
-                                    </div>
-                                 </div>
-                              </fieldset>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
+      @include('home.footer')
       <!-- footer end -->
 
     
-    <!-- container-scroller -->
-         
-      <div class="cpy_">
-         <p class="mx-auto">© 2023 All Rights Reserved By <a href="{{url('/')}}">AguraMarket</a><br>
-         
-         </p>
       </div>
       <!-- jQery -->
       <script src="home/js/jquery-3.4.1.min.js"></script>

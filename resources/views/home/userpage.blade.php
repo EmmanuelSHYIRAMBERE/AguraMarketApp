@@ -42,12 +42,6 @@
       @include('home.footer')
       <!-- footer end -->
 
-      <div class="cpy_">
-         <p class="mx-auto">© 2023 All Rights Reserved By <a href="{{url('/')}}">AguraMarket</a><br>
-         
-         </p>
-      </div>
-      
       <!-- scripts -->
     @include('home.script')
 

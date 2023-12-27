@@ -10,6 +10,8 @@ use App\Models\Services;
 
 use App\Models\Product;
 
+use App\Models\Order;
+
 class AdminController extends Controller
 {
     public function view_category()
@@ -17,6 +19,11 @@ class AdminController extends Controller
         $data=category::all();
 
         return view('admin.category', compact('data'));
+    }
+    public function orders()
+    {
+        $orders=order::all();
+        return view('admin.order', compact('orders'));
     }
     public function add_category(Request $request)
     {

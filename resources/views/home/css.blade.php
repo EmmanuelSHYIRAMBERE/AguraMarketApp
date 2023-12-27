@@ -23,8 +23,6 @@
       <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
       <!-- font awesome style -->
       <link href="home/css/font-awesome.min.css" rel="stylesheet" />
-      <!-- Custom styles for this template -->
-      <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
 
@@ -40,7 +38,7 @@
     <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="welcome/assets//css/style.css" />
+    <link rel="stylesheet" href="welcome/assets/css/style.css" />
 
     <!-- 
     - google font link

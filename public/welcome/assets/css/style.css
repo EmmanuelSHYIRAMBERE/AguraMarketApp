@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2023 Emmanuel SHYIRAMBERE
+ * copyright 2022 codewithsadee
  */
 
 /*-----------------------------------*\
@@ -30,71 +30,6 @@
     --white-1: hsl(0, 0%, 100%);
     --white-2: hsl(0, 14%, 98%);
     --black: hsl(0, 0%, 0%);
-    --blue: hsl(210, 100%, 50%);
-    --dark-blue: hsl(210, 100%, 25%);
-    --light-blue: hsl(210, 100%, 75%);
-
-    --red: hsl(0, 100%, 50%);
-    --dark-red: hsl(0, 100%, 25%);
-    --light-red: hsl(0, 100%, 75%);
-
-    --dodger-blue: hsl(210, 100%, 56%);
-    --dark-dodger-blue: hsl(210, 100%, 36%);
-    --light-dodger-blue: hsl(210, 100%, 76%);
-
-    --green: hsl(120, 100%, 50%);
-    --dark-green: hsl(120, 100%, 25%);
-    --light-green: hsl(120, 100%, 75%);
-    --green: hsl(120, 100%, 50%);
-    --dark-green: hsl(120, 100%, 25%);
-    --light-green: hsl(120, 100%, 75%);
-    --darker-green: hsl(120, 100%, 15%);
-    --lighter-green: hsl(120, 100%, 85%);
-    --forest-green: hsl(120, 70%, 30%);
-    --lime-green: hsl(90, 100%, 50%);
-    --olive-green: hsl(60, 100%, 25%);
-    --mint-green: hsl(150, 100%, 75%);
-    --turquoise-blue: hsl(180, 100%, 50%);
-    --deep-turquoise: hsl(180, 100%, 25%);
-    --light-turquoise: hsl(180, 100%, 75%);
-    --teal-blue: hsl(200, 100%, 50%);
-    --deep-teal: hsl(200, 100%, 25%);
-    --light-teal: hsl(200, 100%, 75%);
-    --aqua-blue: hsl(160, 100%, 50%);
-    --deep-aqua: hsl(160, 100%, 25%);
-    --light-aqua: hsl(160, 100%, 75%);
-    --cerulean: hsl(200, 80%, 50%);
-
-    --orange: hsl(30, 100%, 50%);
-    --dark-orange: hsl(30, 100%, 25%);
-    --light-orange: hsl(30, 100%, 75%);
-
-    --purple: hsl(270, 100%, 50%);
-    --dark-purple: hsl(270, 100%, 25%);
-    --light-purple: hsl(270, 100%, 75%);
-    --yellow: hsl(60, 100%, 50%);
-    --dark-yellow: hsl(60, 100%, 25%);
-    --light-yellow: hsl(60, 100%, 75%);
-
-    --cyan: hsl(180, 100%, 50%);
-    --dark-cyan: hsl(180, 100%, 25%);
-    --light-cyan: hsl(180, 100%, 75%);
-
-    --pink: hsl(330, 100%, 75%);
-    --dark-pink: hsl(330, 100%, 55%);
-    --light-pink: hsl(330, 100%, 90%);
-
-    --teal: hsl(180, 100%, 35%);
-    --dark-teal: hsl(180, 100%, 20%);
-    --light-teal: hsl(180, 100%, 50%);
-
-    --magenta: hsl(300, 100%, 50%);
-    --dark-magenta: hsl(300, 100%, 25%);
-    --light-magenta: hsl(300, 100%, 75%);
-
-    --gold: hsl(45, 100%, 50%);
-    --dark-gold: hsl(45, 100%, 25%);
-    --light-gold: hsl(45, 100%, 75%);
 
     /**
    * gradient color
@@ -237,7 +172,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(0, 0%, 88%);
+    background-color: hsl(0, 0%, 80%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -251,6 +186,7 @@ body {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+
 .container {
     padding-inline: 15px;
 }
@@ -278,6 +214,7 @@ body {
     background-color: var(--white-1);
     color: var(--eerie-black);
 }
+
 .btn-secondary:is(:hover, :focus) {
     background-color: var(--eerie-black);
     color: var(--white-1);
@@ -285,6 +222,7 @@ body {
 
 .section {
     padding-block: var(--section-padding);
+    background: var(--light-gray);
 }
 
 .h1,
@@ -309,11 +247,6 @@ body {
 
 .w-100 {
     width: 100%;
-    border-radius: 30%;
-}
-
-.butt {
-    margin-bottom: 20px;
 }
 
 .section-title,
@@ -332,6 +265,7 @@ body {
 
 .img-holder {
     aspect-ratio: var(--width) / var(--height);
+    background-color: var(--light-gray);
 }
 
 .img-cover {
@@ -340,10 +274,8 @@ body {
     object-fit: cover;
 }
 
-.selection {
-    display: flex;
-    width: 100%;
-    margin: 10px;
+.img_round {
+    border-radius: 40px;
 }
 
 /*-----------------------------------*\
@@ -445,13 +377,12 @@ body {
 }
 
 /*-----------------------------------*\
-  #HERO
+  #HEO
 \*-----------------------------------*/
 
 .hero {
     padding-block-start: calc(var(--section-padding) + 50px);
     text-align: center;
-    background-color: var(--platinum);
 }
 
 .hero-content {
@@ -469,7 +400,7 @@ body {
 }
 
 .hero-text {
-    font-size: var(--fs-3);
+    font-size: var(--fs-5);
 }
 
 .hero .btn {
@@ -477,21 +408,12 @@ body {
     margin-block-start: 20px;
 }
 
-.hero-banner {
-    border-radius: 50%;
-}
-
-.current {
-    display: flex;
-    margin: 10px;
-}
-
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
 
 .service {
-    background-color: var(--platinum);
+    background-color: var(--light-gray);
 }
 
 .service .section-text {
@@ -501,7 +423,6 @@ body {
 .service-card {
     background-color: var(--white-1);
     padding: 20px 15px;
-    margin: 20px;
     border: 1px solid var(--platinum);
     border-radius: var(--radius-5);
     text-align: center;
@@ -531,65 +452,11 @@ body {
 }
 
 /*-----------------------------------*\
-  #PROJECT
-\*-----------------------------------*/
-.project .section-text {
-    margin-block: 5px 35px;
-}
-
-.project-card {
-    position: relative;
-    border-radius: var(--radius-8);
-    overflow: hidden;
-}
-
-.project-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--black);
-    opacity: 0.5s;
-    transition: var(--transition-2);
-}
-
-.project-card:is(:hover, :focus-within)::after {
-    opacity: 0.8;
-}
-
-.project-card .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    z-index: 1;
-    transition: var(--transition-2);
-}
-
-.project-card:is(:hover, :focus-within) .card-content {
-    transform: translateY(-20px);
-}
-
-.project-card .card-subtitle {
-    color: var(--lavender-gray);
-    font-size: var(--fs-6);
-    line-height: 1;
-}
-
-.project-card .card-title {
-    color: var(--white-1);
-    margin-block: 12px 15px;
-}
-
-/*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
 
 .about {
-    background-color: var(--white-2);
+    background-color: var(--light-gray);
 }
 
 .about-banner {
@@ -621,12 +488,6 @@ body {
     }
 }
 
-.im {
-    padding: 10px;
-    height: 100%;
-    border-radius: 30%;
-}
-
 .about :is(.section-title, .section-text) {
     text-align: left;
 }
@@ -636,7 +497,7 @@ body {
 }
 
 .about .section-text:not(:last-child) {
-    margin-block-end: 10px;
+    margin-block-end: 18px;
 }
 
 .about .h3 {
@@ -705,4 +566,627 @@ body {
 
 .cta .btn {
     margin-inline: auto;
+}
+
+/*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
+
+.contact {
+    background-color: var(--light-gray);
+}
+
+.contact .section-text {
+    margin-block: 5px 35px;
+}
+
+.contact-form {
+    background-color: var(--white-1);
+    padding: 20px;
+    border-radius: var(--radius-2);
+    margin-block-end: 30px;
+    box-shadow: var(--shadow-1);
+}
+
+.input-field {
+    background-color: var(--light-gray);
+    color: var(--eerie-black);
+    font-size: var(--fs-5);
+    padding: 15px;
+    border-radius: var(--radius-2);
+    outline: 1px solid transparent;
+    outline-offset: 0;
+    margin-block-end: 15px;
+}
+
+.input-field::-webkit-inner-spin-button {
+    display: none;
+}
+
+.input-field:focus {
+    outline-color: var(--red-crayola);
+}
+
+.input-field::placeholder {
+    transition: var(--transition-1);
+}
+
+.input-field:focus::placeholder {
+    opacity: 0;
+}
+
+textarea.input-field {
+    resize: vertical;
+    min-height: 80px;
+    height: 100px;
+    max-height: 200px;
+    overscroll-behavior: contain;
+}
+
+.checkbox {
+    width: max-content;
+    margin-block-start: 5px;
+    accent-color: var(--red-crayola);
+}
+
+.label-link {
+    display: inline-block;
+    color: var(--red-crayola);
+}
+
+.label-link:is(:hover, :focus) {
+    text-decoration: underline;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-block-end: 15px;
+}
+
+.checkbox-wrapper .label {
+    font-size: var(--fs-6);
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 25px;
+}
+
+.contact-item {
+    min-width: 100%;
+}
+
+.contact-card {
+    background-color: var(--white-1);
+    padding: 20px;
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-1);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-card .card-icon {
+    background-color: var(--cultured-2);
+    color: var(--red-crayola);
+    font-size: 25px;
+    padding: 13px;
+    border-radius: 50%;
+    transition: var(--transition-1);
+}
+
+.contact-card:is(:hover, :focus) .card-icon {
+    background-color: var(--red-crayola);
+    color: var(--white-1);
+}
+
+.contact-card .card-title {
+    margin-block-end: 5px;
+}
+
+.contact-card :is(.card-link, .card-address) {
+    font-size: var(--fs-6);
+    transition: var(--transition-1);
+}
+
+.contact-card .card-link:is(:hover, :focus) {
+    color: var(--red-crayola);
+}
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.footer {
+    background-color: var(--white-2);
+    padding-block: 20px;
+}
+
+.copyright {
+    font-size: var(--fs-6);
+    text-align: center;
+}
+
+.copyright-link {
+    color: var(--red-crayola);
+    font-weight: var(--fw-500);
+    display: inline-block;
+}
+
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+.back-top-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: var(--eerie-black);
+    color: var(--white-1);
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-2);
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-1);
+}
+
+.back-top-btn.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px);
+}
+
+.back-top-btn:is(:hover, :focus) {
+    opacity: 0.9;
+}
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 575px screen
+ */
+
+@media (min-width: 575px) {
+    /**
+   * REUSED STYLE
+   */
+
+    .container {
+        max-width: 540px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .grid-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+
+    /**
+   * BLOG
+   */
+
+    .blog .grid-list {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card.grid {
+        display: grid;
+        grid-template-columns: 0.47fr 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /**
+   * CONTACT
+   */
+
+    .input-wrapper {
+        display: flex;
+        gap: 15px;
+    }
+
+    .contact-item {
+        min-width: calc(50% - 18px);
+    }
+}
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+    /**
+   * CUSTOM PROPERTY
+   */
+
+    :root {
+        /**
+     * typography
+     */
+
+        --fs-1: 4.5rem;
+        --fs-2: 3.7rem;
+        --fs-3: 2.3rem;
+        --fs-4: 1.8rem;
+        --fs-5: 1.5rem;
+        --fs-6: 1.4rem;
+    }
+
+    /**
+   * REUSED STYLE
+   */
+
+    .container {
+        max-width: 720px;
+    }
+
+    .section-text {
+        max-width: 65ch;
+        margin-inline: auto;
+    }
+
+    /**
+   * HERO
+   */
+
+    .hero-text {
+        max-width: 60ch;
+        margin-inline: auto;
+    }
+
+    /**
+   * ABOUT
+   */
+
+    .about-banner {
+        max-width: 550px;
+    }
+
+    .about .section-text {
+        max-width: unset;
+        margin-inline: 0;
+    }
+
+    /**
+   * CONTACT
+   */
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-item {
+        min-width: calc(50% - 12.5px);
+    }
+}
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+    /**
+   * CUSTOM PROPERTY
+   */
+
+    :root {
+        /**
+     * typography
+     */
+
+        --fs-1: 5rem;
+        --fs-2: 4rem;
+        --fs-3: 2.5rem;
+
+        /**
+     * spacing
+     */
+
+        --section-padding: 100px;
+    }
+
+    /**
+   * REUSED STYLE
+   */
+
+    .container {
+        max-width: 960px;
+    }
+
+    .grid-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /**
+   * HEADER
+   */
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .navbar,
+    .navbar.active {
+        all: unset;
+    }
+
+    .navbar-list {
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navbar-link {
+        position: relative;
+    }
+
+    .navbar-link:is(:hover, :focus) {
+        color: var(--eerie-black);
+    }
+
+    .navbar-link::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-image: var(--gradient);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: var(--transition-2);
+    }
+
+    .navbar-link:is(:hover, :focus)::after {
+        transform: scaleX(1);
+    }
+
+    .header .btn {
+        margin-block-start: 0;
+    }
+
+    /**
+   * HERO
+   */
+
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .hero-content {
+        margin-block-end: 0;
+    }
+
+    .hero-subtitle {
+        position: relative;
+        padding-inline-start: 15px;
+    }
+
+    .hero-subtitle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-color: var(--red-crayola);
+    }
+
+    .hero-text,
+    .hero .btn {
+        margin-inline: 0;
+    }
+
+    /**
+   * SERVICE
+   */
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-card .h3 {
+        --fs-3: 2.3rem;
+    }
+
+    /**
+   * PROJECT
+   */
+
+    .project-card .card-subtitle {
+        --fs-6: 1.5rem;
+    }
+
+    /**
+   * ABOUT
+   */
+
+    .about .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-banner {
+        margin-block-end: 0;
+    }
+
+    /**
+   * BLOG
+   */
+
+    .blog .grid-list {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    .blog .grid-list > li:first-child {
+        grid-column: 1 / 2;
+        grid-row: 1 / 5;
+    }
+
+    .blog-card:not(.grid) {
+        height: 100%;
+    }
+
+    .blog-card .card-content {
+        padding-block: 10px;
+    }
+
+    .blog-card:not(.grid) .card-content {
+        padding: 25px;
+    }
+
+    .blog-card.grid .h3 {
+        --fs-3: 2rem;
+    }
+
+    .blog-card .time {
+        --fs-6: 1.6rem;
+    }
+
+    /**
+   * CONTACT
+   */
+
+    .checkbox-wrapper {
+        margin-block: 20px;
+    }
+
+    .contact-item {
+        min-width: calc(33.33% - 16.66px);
+    }
+
+    .contact-card {
+        padding: 30px;
+    }
+
+    .contact-card .card-icon {
+        font-size: 32px;
+    }
+}
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+    /**
+   * CUSTOM PROPERTY
+   */
+
+    :root {
+        /**
+     * typography
+     */
+
+        --fs-1: 6.8rem;
+        --fs-2: 4.5rem;
+        --fs-4: 1.9rem;
+        --fs-5: 1.6rem;
+        --fs-6: 1.6rem;
+    }
+
+    /**
+   * REUSED STYLE
+   */
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .btn {
+        --fs-6: 1.5rem;
+    }
+
+    /**
+   * SERVICE
+   */
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .service-card .h3 {
+        --fs-3: 2.5rem;
+    }
+
+    /**
+   * PROJECT
+   */
+
+    .project-card .card-content {
+        padding: 30px;
+    }
+
+    .project-card .card-subtitle {
+        --fs-6: 1.6rem;
+    }
+
+    /**
+   * ABOUT
+   */
+
+    .about .container {
+        gap: 60px;
+    }
+
+    .about-item {
+        gap: 7px;
+    }
+
+    .about-item ion-icon {
+        font-size: 20px;
+    }
+
+    /**
+   * CTA
+   */
+
+    .cta .section-title {
+        margin-block: 15px 24px;
+    }
+
+    /**
+   * BLOG
+   */
+
+    .blog-card .time {
+        --fs-6: 1.6rem;
+    }
+
+    .blog-card.grid .h3 {
+        --fs-3: 2.4rem;
+    }
+
+    /**
+   * CONTACT
+   */
+
+    .contact-form {
+        padding: 50px;
+    }
+
+    .contact-card {
+        gap: 20px;
+    }
+
+    .contact-card .card-icon {
+        padding: 15px;
+    }
 }

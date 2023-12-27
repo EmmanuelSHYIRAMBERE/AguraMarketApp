@@ -22,11 +22,8 @@
                 margin-top: 30px;
                 border: 3px solid white;
             }
-            .font_size{
-                text-align: center;
-                padding-top: 40px;
-                font-size: 40px;
-                padding-bottom: 40px;
+            .form_margin {
+                margin-bottom: 20px;
             }
         </style>
 
@@ -43,7 +40,7 @@
                 <div class="main-panel">
                     <div class="content-wrapper">
 
-                    @if(session()->has('message'))
+                        @if(session()->has('message'))
                             <div class="alert alert-success">
                                 
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
@@ -53,39 +50,53 @@
                             </div>
                         @endif
 
-                        <h1 class="font_size">Contacts</h1>
-                <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card">
+                        <div class="div_center">
+                            <h2 class="h2_font">Customer Orders</h2>
+
+                        </div>
+                        <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card">
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-hover">
                         <thead>
                           <tr>
-                            <th>User Names</th>
-                            <th>Company Names</th>
+                            <th>User Name</th>
                             <th>Email</th>
+                            <th>Address</th>
                             <th>Phone</th>
-                            <th>Message</th>
+                            <th>Product Title</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Payment Status</th>
+                            <th>Delivery Status</th>
+                            <th>Image</th>
+                            <th>Date</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
 
-                        @foreach($contact as $contacts)
+                        @foreach($orders as $order)
 
-                          <tr>
-                            <td>{{$contacts->names}}</td>
-                            <td>{{$contacts->company_name}}</td>
-                            <td>{{$contacts->email}}</td>
-                            <td>{{$contacts->phone}}</td>
-                            <td>{{$contacts->message}}</td>
-                            <td>
-                                <a href="{{url('reply_contact', $contacts->id)}}" class="btn btn-success">Reply</a>
-                                <a onclick="return confirm('Are You Sure To Delete This')" href="{{url('delete_contact', $contacts->id)}}" class="btn btn-danger">Delete</a>
-                            </td>
-                          </tr>
+                            <tr>
+                                <td>{{$order->name}}</td>
+                                <td>{{$order->email}}</td>
+                                <td>{{$order->address}}</td>
+                                <td>{{$order->phone}}</td>
+                                <td>{{$order->product_title}}</td>
+                                <td>{{$order->quantity}}</td>
+                                <td>{{$order->price}}</td>
+                                <td>{{$order->payment_status}}</td>
+                                <td>{{$order->delivery_status}}</td>
+                                <td><img src="/product/{{$order->image}}" alt=""></td>
+                                <td>{{$order->updated_at}}</td>
+                                <td>
+                                    <a onclick="return confirm('Are You Sure To Delete This')" href="{{url('delete_order', $order->id)}}" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
 
-                        @endforeach
+                            @endforeach
 
                         </tbody>
                       </table>
@@ -93,9 +104,9 @@
                   </div>
                 </div>
               </div>
+                
                     </div>
                 </div>
-                
                 
                 <!-- container-scroller -->
                 @include('admin.script')

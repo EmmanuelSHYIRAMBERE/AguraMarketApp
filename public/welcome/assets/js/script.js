@@ -15,33 +15,40 @@ const addEventOnElem = function (elem, type, callback) {
 };
 
 /**
- * tooggle navbar
+ * toggle navbar
  */
 
 const navbar = document.querySelector("[data-navbar]");
 const navbarLinks = document.querySelectorAll("[data-nav-link]");
-const navTogger = document.querySelector("[data-nav-toggler]");
+const navToggler = document.querySelector("[data-nav-toggler]");
 
-const togglerNavbar = function () {
+const toggleNavbar = function () {
     navbar.classList.toggle("active");
-    navTogger.classList.toggle("active");
+    navToggler.classList.toggle("active");
 };
 
-addEventOnElem(navTogger, "click", togglerNavbar);
+addEventOnElem(navToggler, "click", toggleNavbar);
 
 const closeNavbar = function () {
     navbar.classList.remove("active");
-    navTogger.classList.remove("active");
+    navToggler.classList.remove("active");
 };
 
 addEventOnElem(navbarLinks, "click", closeNavbar);
 
+/**
+ * header active
+ */
+
 const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
         header.classList.add("active");
+        backTopBtn.classList.add("active");
     } else {
         header.classList.remove("active");
+        backTopBtn.classList.remove("active");
     }
 });

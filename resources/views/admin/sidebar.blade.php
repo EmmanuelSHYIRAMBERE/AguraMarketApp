@@ -257,6 +257,13 @@
                                         >Category</a
                                     >
                                 </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        href="{{url('orders')}}"
+                                        >Orders</a
+                                    >
+                                </li>
                             </ul>
                         </div>
                     </li>
