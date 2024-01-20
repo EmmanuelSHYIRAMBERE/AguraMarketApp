@@ -50,6 +50,7 @@
                             <th>Objective</th>
                             <th>Target Audience</th>
                             <th>Campaigns Metrics</th>
+                            <th>Status</th>
                             <th>Action</th>
                           </tr>
                         </thead>
@@ -65,6 +66,7 @@
                             <td>{{$campaigns->objective}}</td>
                             <td>{{$campaigns->target_Audience}}</td>
                             <td>{{$campaigns->metrics}}</td>
+                            <td>{{$campaigns->status}}</td>
                             <td>
                                 <a href="{{url('update_campaign', $campaigns->id)}}" class="btn btn-success">Edit</a>
                                 <a onclick="return confirm('Are You Sure To Delete This')" href="{{url('delete_campaign', $campaigns->id)}}" class="btn btn-danger">Delete</a>

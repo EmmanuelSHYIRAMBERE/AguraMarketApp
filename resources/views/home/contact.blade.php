@@ -106,7 +106,7 @@
    </head>
    <body>
          <!-- header section strats -->
-            @include('home.header')
+            @include('welcome.header')
             <!-- end header section -->
             
       <!-- contact section -->

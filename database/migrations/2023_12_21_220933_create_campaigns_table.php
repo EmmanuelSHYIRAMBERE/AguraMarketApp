@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('channels')->nullable();
             $table->string('creative_Assets')->nullable();
             $table->string('metrics')->nullable();
+            $table->string('status')->default('inactive');
 
             $table->timestamps();
         });

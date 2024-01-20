@@ -29,7 +29,7 @@
           </li>
 
           <li>
-            <a href="{{url('/#contact')}}" class="navbar-link" data-nav-link>Contact Us</a>
+            <a href="{{url('/contact')}}" class="navbar-link" data-nav-link>Contact Us</a>
           </li>
 
           <li>

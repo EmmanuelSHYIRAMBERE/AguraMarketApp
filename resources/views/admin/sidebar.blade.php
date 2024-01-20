@@ -2,10 +2,10 @@
                 <div
                     class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top"
                 >
-                    <a class="sidebar-brand brand-logo" href="index.html"
+                    <a class="sidebar-brand brand-logo" href="{{url('/')}}"
                         ><img src="assets/hero-banner.png" alt="logo"
                     /></a>
-                    <a class="sidebar-brand brand-logo-mini" href="index.html"
+                    <a class="sidebar-brand brand-logo-mini" href="{{url('/')}}"
                         ><img src="admin/assets/images/logo-mini.svg" alt="logo"
                     /></a>
                 </div>
@@ -140,82 +140,6 @@
                                         >Show Campaigns</a
                                     >
                                 </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="{{url('view_service')}}"
-                                        >Campaign Services</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item menu-items">
-                        <a
-                            class="nav-link"
-                            data-toggle="collapse"
-                            href="#ui-basic2"
-                            aria-expanded="false"
-                            aria-controls="ui-basic"
-                        >
-                            <span class="menu-icon">
-                                <i class="mdi mdi-account-multiple-outline"></i>
-                            </span>
-                            <span class="menu-title">Teams</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="ui-basic2">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Management Team</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Marketing Team</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Creativity Team</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Support Team</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Finance Team</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Security Team</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Analytics Team</a
-                                    >
-                                </li>
                             </ul>
                         </div>
                     </li>
@@ -267,55 +191,18 @@
                             </ul>
                         </div>
                     </li>
-
+                    
                     <li class="nav-item menu-items">
                         <a
                             class="nav-link"
-                            data-toggle="collapse"
-                            href="#ui-basic5"
-                            aria-expanded="false"
-                            aria-controls="ui-basic1"
+                            href="{{url('view_service')}}"
                         >
                             <span class="menu-icon">
-                                <i class="mdi mdi-wallet-travel"></i>
+                                <i class="mdi mdi-sort"></i>
                             </span>
-                            <span class="menu-title">Wallet</span>
-                            <i class="menu-arrow"></i>
+                            <span class="menu-title">Services</span>
                         </a>
-                        <div class="collapse" id="ui-basic5">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Revenue</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Expenses</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Transactions</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        href="#"
-                                        >Payroll</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
                     </li>
-                    
                     <li class="nav-item menu-items">
                         <a
                             class="nav-link"

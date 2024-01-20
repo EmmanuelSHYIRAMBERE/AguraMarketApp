@@ -6,9 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Models\Campaigns;
 
+use Illuminate\Support\Facades\Notification;
+
+
 use App\Models\Services;
 
 use App\Models\Contact;
+
+
+use App\Notifications\ReplyContactEmailNotification;
 
 class serviceController extends Controller
 {
@@ -89,10 +95,32 @@ class serviceController extends Controller
     public function delete_contact($id)
     {
         $contact=contact::find($id);
-    
+        
         $contact->delete();
-    
+        
         return redirect()->back()->with('message', 'Contact deleted successfully');
+    }
+    public function reply_contact($id)
+    {
+        $contact=contact::find($id);
+        
+        return view('admin.reply_contact', compact('contact'));
+    }
+    public function send_user_reply_email($id)
+    {
+        $contact=contact::find($id);
+        
+        $reply = [
+            'greeting' => $contact->greeting,
+            'intro' => $contact->intro,
+            'reply' => $contact->reply,
+            'button' => $contact->button,
+            'url' => $contact->url,
+            'remark' => $contact->remark,
+        ];
+        
+        Notification::send($contact,new ReplyContactEmailNotification($reply));
+        return redirect()->back()->with('message', 'Contact reply sent to user email Successfully');
     }
 
     public function view_implementation()

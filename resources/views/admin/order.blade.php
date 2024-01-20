@@ -53,9 +53,17 @@
                         <div class="div_center">
                             <h2 class="h2_font">Customer Orders</h2>
 
+                            <div style="padding-bottom: 30px;">
+                                <form action="{{url('search')}}" method="get">
+                                    <input type="text" name="search" placeholder="Search For Something" style="width: 40%; border-radius:20px; color:black;">
+
+                                    <input type="submit" value="Search" class="btn btn-outline-primary">
+                                </form>
+                            </div>
+
                         </div>
                         <div class="col-lg-12 grid-margin stretch-card">
-                            <div class="card">
+                            <div class="card"> 
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-hover">
@@ -67,17 +75,18 @@
                             <th>Phone</th>
                             <th>Product Title</th>
                             <th>Quantity</th>
-                            <th>Price</th>
+                            <th>Total Price</th>
                             <th>Payment Status</th>
                             <th>Delivery Status</th>
                             <th>Image</th>
-                            <th>Date</th>
-                            <th>Action</th>
+                            <th>Change Status</th>
+                            <th>Print</th>
+                            <th>Connect</th>
                           </tr>
                         </thead>
                         <tbody>
 
-                        @foreach($orders as $order)
+                        @forelse($order as $order)
 
                             <tr>
                                 <td>{{$order->name}}</td>
@@ -86,17 +95,34 @@
                                 <td>{{$order->phone}}</td>
                                 <td>{{$order->product_title}}</td>
                                 <td>{{$order->quantity}}</td>
-                                <td>{{$order->price}}</td>
+                                <td>Rwf {{$order->price}}</td>
                                 <td>{{$order->payment_status}}</td>
                                 <td>{{$order->delivery_status}}</td>
                                 <td><img src="/product/{{$order->image}}" alt=""></td>
-                                <td>{{$order->updated_at}}</td>
                                 <td>
-                                    <a onclick="return confirm('Are You Sure To Delete This')" href="{{url('delete_order', $order->id)}}" class="btn btn-danger">Delete</a>
+                                    @if($order->delivery_status == "processing")
+                                    <a onclick="return confirm('Are you sure this product is delivered')" href="{{url('delivered', $order->id)}}" class="btn btn-danger">Delivered</a>
+                                    @else
+                                    <p class="text-success">Delivered</p>
+                                    @endif
+                                </td>
+                                <td>
+                                    <a href="{{url('print_pdf', $order->id)}}" class="btn btn-secondary">PDF File</a>
+                                </td>
+                                <td>
+                                    <a href="{{url('send_email', $order->id)}}" class="btn btn-info">Send Email</a>
+                                </td>
+                            </tr>
+                            @empty
+
+                            <tr>
+                                <td>
+                                    <p colspan="16" class="text-danger h2_font" style="width: 100%;">There's no data found</p>
+
                                 </td>
                             </tr>
 
-                            @endforeach
+                            @endforelse
 
                         </tbody>
                       </table>

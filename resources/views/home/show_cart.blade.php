@@ -135,7 +135,7 @@
                           <tr>
                             <th>Product Title</th>
                             <th>Product Quantity</th>
-                            <th>Product Price</th>
+                            <th>Total Price</th>
                             <th>Product Image</th>
                             <th>Action</th>
                           </tr>
@@ -154,7 +154,7 @@
                               <td>Rwf{{$carts->price}}</td>
                               <td><img src="product/{{$carts->image}}" alt=""></td>
                               <td>
-                                <a onclick="return confirm('Are You Sure To Remove This Product')" href="{{url('remove_cart', $carts->id)}}" class="btn btn-success">Remove Product</a>
+                                <a onclick="return confirm('Are You Sure To Remove This Product')" href="{{url('remove_cart', $carts->id)}}" ><i class="mdi mdi-delete-forever icon-lg"></i></a>
                             </td>
                             </tr>
 
@@ -172,7 +172,7 @@
                       </div>
 
                       <div class="payment">
-                        <h1 style="font-size: 25px; padding-bottom: 15px;">Proceesd to Order</h1>
+                        <h1 style="font-size: 25px; padding-bottom: 15px;">Proceed to Order</h1>
 
                         <a href="{{ url('cash_order') }}" class="btn btn-danger"><i class="mdi mdi-cash-multiple"></i> Cash On Delivery</a>
                         <a href="{{ url('stripe', $totalprice) }}" class="btn btn-warning"><i class="mdi mdi-cards-outline"></i> Pay Using Card</a>

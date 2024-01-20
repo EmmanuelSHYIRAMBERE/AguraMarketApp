@@ -14,7 +14,7 @@
 
                   <h3 class="h3 card-title">Mail Here</h3>
 
-                  <a href="mailto:hello@luaz.com" class="card-link">aguramarket6@gmail.com</a>
+                  <a href="mailto:aguramarket6@gmail.com" class="card-link">aguramarket6@gmail.com</a>
 
                 </div>
 

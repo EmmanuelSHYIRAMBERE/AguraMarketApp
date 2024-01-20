@@ -26,13 +26,34 @@ class HomeController extends Controller
 
         return view('home.userpage', compact('product', 'data'));
     }
+    public function slider()
+    {
+        $data=Product::all();
+
+        return view('home.slider', compact('data'));
+    }
 
     public function redirect()
     {
         $usertype=Auth::user()->usertype;
 
         if ($usertype=='1') { 
-            return view('admin.home');
+
+            $total_products=product::all()->count();
+            $total_orders=order::all()->count();
+            $total_users=user::all()->count();
+
+            $order=order::where('payment_status','=','paid')->get();
+            $total_revenue=0;
+
+            foreach ($order as $order) {
+                $total_revenue=$total_revenue + $order->price;
+            }
+            $total_delivered=order::where('delivery_status','=','delivered')->get()->count();
+            $total_processing=order::where('delivery_status','=','processing')->get()->count();
+            
+
+            return view('admin.home', compact('total_products','total_orders','total_users', 'total_revenue', 'total_delivered', 'total_processing'));
         }
 
         else {
@@ -64,6 +85,15 @@ class HomeController extends Controller
         $contact->save();
 
         return redirect()->back()->with('message', 'Your message sent Successfully');
+
+    }
+    
+    public function search_product(Request $request)
+    {
+        $searchText=$request->search;
+        $product=product::where('title','LIKE',"%$searchText%")->orWhere('description','LIKE',"%$searchText%")->orWhere('category','LIKE',"%$searchText%")->orWhere('price','LIKE',"%$searchText%")->get();
+        
+        return view('home.userpage', compact('product'));
 
     }
 

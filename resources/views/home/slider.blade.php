@@ -1,10 +1,26 @@
 <section class="slider_section ">
-            <div class="slider_bg_box">
-               <img src="assets/project-4.jpg" alt="">
+   
+            <div class="slider_bg_box" style="background-color: hsl(220, 5%, 49%);">
             </div>
+            
             <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
+               <div style="padding-bottom: 30px;">
+                                <form action="{{url('search_product')}}" method="get">
+                                 <div class="div-row" style="display:inline-block; margin:5px">
+                                    <div>
+                                       <input type="text" name="search" placeholder="Search a Product" style="width: 250%; border-radius:20px; color:black; justify-content:center;">
+                                    </div>
+                                    <div>
+                                       <input type="submit" value="Search" class="btn btn-secondary">
+                                    </div>
+                                 </div>
 
+                                </form>
+                            </div>
+               <div class="carousel-inner">
+                  
+
+               @if(isset($data))
                @foreach($data as $index => $products)
                   <div class="carousel-item {{$index == 0 ? 'active' : ''}}">
                      <div class="container ">
@@ -40,6 +56,7 @@
                   </div>
 
                   @endforeach
+                  @endif
 
                </div>
             </div>

@@ -8,37 +8,6 @@
             Get in touch today and let's explore the possibilities together.
           </p>
 
-          <form action="" class="contact-form">
-
-            <div class="input-wrapper">
-              <input type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
-
-              <input type="email" name="email_address" aria-label="email" placeholder="Email address*" required
-                class="input-field">
-            </div>
-
-            <div class="input-wrapper">
-              <input type="text" name="subject" aria-label="subject" placeholder="Subject" class="input-field">
-
-              <input type="number" name="phone" aria-label="phone" placeholder="Phone number" class="input-field">
-            </div>
-
-            <textarea name="message" aria-label="message" placeholder="Your message...*" required
-              class="input-field"></textarea>
-
-            <div class="checkbox-wrapper">
-              <input type="checkbox" name="terms_and_policy" id="terms" required class="checkbox">
-
-              <label for="terms" class="label">
-                Accept <a href="#" class="label-link">Terms of Services</a> and <a href="#" class="label-link">Privacy
-                  Policy</a>
-              </label>
-            </div>
-
-            <button type="submit" class="btn btn-info">Send Message</button>
-
-          </form>
-
           <ul class="contact-list">
 
             <li class="contact-item">
@@ -52,7 +21,7 @@
 
                   <h3 class="h3 card-title">Mail Here</h3>
 
-                  <a href="mailto:hello@luaz.com" class="card-link">aguramarket6@gmail.com</a>
+                  <a href="mailto:aguramarket6@gmail.com" class="card-link">aguramarket6@gmail.com</a>
 
                 </div>
 
